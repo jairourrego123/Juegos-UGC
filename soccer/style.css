@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+:root {
+  --meter-speed: 3s;
+  --accent-color: gold;
+}
+
+html {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: 
+    url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=26554d45-5a35-5795-b9df-290785e52936&637557339397648405'),
+    #222;
+  font-family: system-ui;
+}
+
+#gamebox {
+  width: 320px;
+  aspect-ratio: 1/1.1;
+  /*     background-color: rgba(255,255,255,.1); */
+  /*     backdrop-filter: blur(4px); */
+  perspective: 320px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 10px rgba(0,0,0,.5);
+  font-size: 16px;
+}
+#gamebox:after {
+  content: '';
+  width: 100%;
+  height: 69%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 1px solid white;
+  border-top: 0;
+  pointer-events: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.grassfield {
+  width: 100%;
+  aspect-ratio: 9/16;
+  background: 
+    linear-gradient(to bottom, transparent 95%, white 95% 100%),
+    linear-gradient(to bottom, rgba(255,255,255,.25) 8.33%, transparent 8.33% 91.67%, white 91.67% 100%),
+    url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=26554d45-5a35-5795-b9df-290785e52936&637557339397648405'),
+    forestgreen;
+  background-size: 100% 8.33%, 100% 100%;
+  transform: rotateX(25deg) scale(1.25);
+  position: relative;
+  top: 15%;
+  outline: 1em solid white;
+}
+
+.fieldNumbers {
+  color: white;
+  position: absolute;
+  left: 5%;
+  font-size: 1.5em;
+  transform: rotate(90deg) translate(9px, 0px);
+  font-family: system-ui;
+  letter-spacing: 5px;
+}
+.fieldNumbers:nth-child(1) {
+  top: 12.5%;
+}
+.fieldNumbers:nth-child(2) {
+  top: 20.83%;
+}
+.fieldNumbers:nth-child(3) {
+  top: 29.16%;
+}
+.fieldNumbers:nth-child(4) {
+  top: 37.49%;
+}
+.fieldNumbers:nth-child(5) {
+  top: 45.82%;
+}
+
+.fieldNumbers:after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: -253px;
+  transform: rotate(180deg);
+}
+
+.fieldNumbers:nth-child(1):after {
+  content: '10';
+}
+.fieldNumbers:nth-child(2):after {
+  content: '20';
+}
+.fieldNumbers:nth-child(3):after {
+  content: '30';
+}
+.fieldNumbers:nth-child(4):after {
+  content: '40';
+}
+.fieldNumbers:nth-child(5):after {
+  content: '50';
+}
+
+.goalText {
+  color: white;
+  position: absolute;
+  width: 93.5%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-family: 'Graduate', monospace, system-ui;
+  font-size: 3em;
+  text-shadow: 3px 3px black;
+  z-index: -1;  
+  transform: translateY(100%); opacity: 0;
+  user-select: none;
+  transition: .5s;
+}
+
+.showCongrats {  
+  transform: translateY(0%); opacity: 1;
+}
+
+.goalpost {
+  position: absolute;
+  width: 10%;
+  aspect-ratio: 1/1.5;
+  background: gold;
+  top: 2.5%;
+  left: 45%;
+  clip-path: polygon(0% 0%, 10% 0%, 10% 53%, 90% 53%, 90% 0%, 100% 0%, 100% 60%, 55% 60%, 55% 100%, 45% 100%, 45% 60%, 0% 60%);
+}
+
+.theBall {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 33%;
+  left: calc(50% - 10px);
+  perspective: 100px;  
+  filter: drop-shadow(0px 0px 2px black);
+}
+@keyframes kick {
+  95% { opacity: 1; }
+  100% { transform: rotateX(-720deg); opacity: 0; }
+}
+
+.theBall:before {
+  content: '☰';
+  position: absolute;
+  inset: 0;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: .65em;
+}
+
+.theBall:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to bottom right, sienna 40%, saddlebrown 60%);
+  border-radius: 80% 10% 80% 10%; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.ball_kicked {
+  transition: 3s linear;
+  animation: kick 3s linear forwards;
+}
+
+.goalMeter {
+  width: 80%;
+  height: 20px;
+  background: 
+    linear-gradient(to left, transparent 45%, rgba(255,255,255,.25) 45% 55%, transparent 55%),
+    rgba(0,0,0,.25);
+  position: absolute;
+  left: 10%;
+  top: 20.5%;
+  border-radius: 1em;
+  box-shadow:  inset 0 2px 2px rgba(0,0,0,.15), 0 1px 1px rgba(255,255,255,.25);
+}
+.meterMarker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, transparent 25%, var(--accent-color) 25%);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  filter: drop-shadow(0px 2px 3px rgba(0,0,0,.5));
+  animation: meterMaid var(--meter-speed) linear infinite;
+}
+@keyframes meterMaid {
+  50% { left: calc(100% - 18px); }
+}
+
+#fieldgoalStart {
+  min-width: 50%;
+  position: absolute;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: black;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 3px 5px rgba(0,0,0,.5);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,15%);
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#fieldgoalStart p {
+  min-width: 50%;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  background: var(--accent-color);
+  border-radius: 1rem;
+  box-shadow: 0 3px 5px rgba(0,0,0,.25);
+}

@@ -1,31 +1,31 @@
 :root {
   --color1: rgb(0, 231, 255);
   --color2: rgb(255, 0, 231);
-  --back: url("./src/Icon.jpg");
+  --back: url("/juegos/src/Icon.jpg");
   --colorin1: #fac;
   --colorin2: #ddccaa;
-  --colorinfront: url("./src/colorin.png");
+  --colorinfront: url("/juegos/src/colorin.png");
   --escape1: #54a29e;
   --escape2: #a79d66;
-  --escapefront: url("./src/escape.png");
+  --escapefront: url("/juegos/src/escape.png");
   --escritura1: #efb2fb;
   --escritura2: #acc6f8;
-  --escriturafront: url("./src/escritura.png");
+  --escriturafront: url("/juegos/src/escritura.png");
   --laberunto1: #efb2fb;
   --laberunto2: #acc6f8;
-  --laberuntofront: url("/src/laberinto.png");
+  --laberuntofront: url("/juegos/src/laberinto.png");
   --soccer1: #efb2fb;
   --soccer2: #acc6f8;
-  --soccerfront: url("/src/soccer.png");
+  --soccerfront: url("/juegos/src/soccer.png");
   --tiroalblanco2: #acc6f8;
   --tiroalblanco1: #efb2fb;
-  --tiroalblancofront: url("/src/tiroalblanco.png");
+  --tiroalblancofront: url("/juegos/src/tiroalblanco.png");
   --torre2: #acc6f8;
   --torre1: #efb2fb;
-  --torrefront: url("/src/torre.png");
+  --torrefront: url("/juegos/src/torre.png");
   --tricky2: #acc6f8;
   --tricky1: #efb2fb;
-  --trickyfront: url("/src/tricky.png");
+  --trickyfront: url("/juegos/src/tricky.png");
 }
 
 .card {

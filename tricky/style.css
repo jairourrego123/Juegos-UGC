@@ -4,10 +4,11 @@
 /* Body and Notice styling
 -------------------------------------------------------------- */
 body {
-  color: #b6b5ca;
+  color: #fff;
   font-family: 'Arial', sans-serif;
   margin: 0;
   text-align: center;
+  background-color: #00460f;
 }
 
 h5 {
@@ -48,10 +49,10 @@ h5 {
   opacity: 1;
 }
 .tic-tac-toe input[type="radio"].player-1:checked + label {
-  background-color: #dc685a;
+  background-color: #452600;
 }
 .tic-tac-toe input[type="radio"].player-2:checked + label {
-  background-color: #ecaf4f;
+  background-color: #1B0045;
 }
 .tic-tac-toe input[type="radio"].turn-1 + label {
   z-index: 1;
@@ -147,7 +148,7 @@ input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:
 .tic-tac-toe input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:checked ~
 input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:checked ~
 input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:checked ~ .end > h3:before {
-  content: "It is a tie!";
+  content: "Empate!";
 }
 .tic-tac-toe .player-1.first-column:checked ~ .player-1.first-column:checked ~ .player-1.first-column:checked ~ .end,
 .tic-tac-toe .player-1.second-column:checked ~ .player-1.second-column:checked ~ .player-1.second-column:checked ~ .end,
@@ -167,7 +168,7 @@ input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:
 .tic-tac-toe .player-1.third-row:checked ~ .player-1.third-row:checked ~ .player-1.third-row:checked ~ .end h3:before,
 .tic-tac-toe .player-1.first-diagonal:checked ~ .player-1.first-diagonal:checked ~ .player-1.first-diagonal:checked ~ .end h3:before,
 .tic-tac-toe .player-1.second-diagonal:checked ~ .player-1.second-diagonal:checked ~ .player-1.second-diagonal:checked ~ .end h3:before {
-  content: "Player 1 wins!" !important;
+  content: "Jugador 1 Gana!" !important;
 }
 .tic-tac-toe .player-2.first-column:checked ~ .player-2.first-column:checked ~ .player-2.first-column:checked ~ .end,
 .tic-tac-toe .player-2.second-column:checked ~ .player-2.second-column:checked ~ .player-2.second-column:checked ~ .end,
@@ -187,10 +188,10 @@ input[type="radio"]:checked ~ input[type="radio"]:checked ~ input[type="radio"]:
 .tic-tac-toe .player-2.third-row:checked ~ .player-2.third-row:checked ~ .player-2.third-row:checked ~ .end h3:before,
 .tic-tac-toe .player-2.first-diagonal:checked ~ .player-2.first-diagonal:checked ~ .player-2.first-diagonal:checked ~ .end h3:before,
 .tic-tac-toe .player-2.second-diagonal:checked ~ .player-2.second-diagonal:checked ~ .player-2.second-diagonal:checked ~ .end h3:before {
-  content: "Player 2 wins!" !important;
+  content: "Jugador 2 Gana!" !important;
 }
 .tic-tac-toe label {
-  background-color: #78bec5;
+  background-color: #339A4A;
   border-radius: 14px;
   cursor: pointer;
   color: #fff;

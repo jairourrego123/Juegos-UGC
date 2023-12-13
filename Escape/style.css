@@ -7,7 +7,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #111;
+  background-color: #00460f;
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -134,7 +134,7 @@ body {
   width: 320px;
   height: 10px;
   border-radius: 5px;
-  background-image: linear-gradient(#f000, #f00, #f000);
+  background-image: linear-gradient(#f000, #00460f, #f000);
   -webkit-animation: laserOff 0.5s ease-out forwards;
           animation: laserOff 0.5s ease-out forwards;
 }

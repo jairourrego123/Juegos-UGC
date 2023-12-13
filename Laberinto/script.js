@@ -9,11 +9,11 @@ const bd = document.getElementById("bd");
 const bl = document.getElementById("bl");
 const br = document.getElementById("br");
 
-const step = 20;
-const size = 20;
+const step = 40;
+const size = 40;
 const bwidth = 2;
-const mazeHeight = 200;
-const mazeWidth = 300;
+const mazeHeight = 400;
+const mazeWidth = 600;
 let nogoX = [];
 let nogoX2 = [];
 let nogoY = [];
@@ -435,6 +435,7 @@ function updateEmo(lr) {
 		if (thingie.offsetLeft > mazeWidth) {
 			emo.innerHTML = "";
 			home.innerHTML = "🥳";
+			location.reload();
 		}
     prevl = thingie.offsetLeft;
 	} else {

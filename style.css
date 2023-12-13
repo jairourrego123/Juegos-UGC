@@ -2,9 +2,9 @@
   --color1: rgb(0, 231, 255);
   --color2: rgb(255, 0, 231);
   --back: url("/juegos/src/Icon.jpg");
-  --colorin1: #fac;
-  --colorin2: #ddccaa;
-  --colorinfront: url("/juegos/src/colorin.png");
+  --memory1: #fac;
+  --memory2: #ddccaa;
+  --memoryfront: url("/juegos/src/memory.png");
   --escape1: #54a29e;
   --escape2: #a79d66;
   --escapefront: url("/juegos/src/escape.png");
@@ -29,8 +29,8 @@
 }
 
 .card {
-  width: 71.5vw;
-  height: 100vw;
+  width: clamp(12.9vw, 91vh, 28vw);
+  height: clamp(15vw, 11vh, 65.2vw);
   position: relative;
   overflow: hidden;
   margin: 20px;
@@ -49,10 +49,17 @@
   transform-origin: center;
 }
 
-@media screen and (min-width: 600px) {
+.cards {
+  flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
   .card {
-    width: clamp(12.9vw, 61vh, 18vw);
-    height: clamp(18vw, 85vh, 25.2vw);
+    width: clamp(42.9vw, 91vh, 48vw);
+    height: clamp(58vw, 115vh, 65.2vw);
+  }
+  .cards {
+    flex-direction: column;
   }
 }
 
@@ -60,10 +67,10 @@
   box-shadow: -20px -20px 30px -25px var(--color1), 20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1), 7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
 }
 
-.card.colorin {
-  --color1: var(--colorin1);
-  --color2: var(--colorin2);
-  --front: var(--colorinfront);
+.card.memory {
+  --color1: var(--memory1);
+  --color2: var(--memory2);
+  --front: var(--memoryfront);
 }
 
 .card.escape {
@@ -513,11 +520,8 @@ p {
   justify-content: center;
 }
 
-@media screen and (min-width: 600px) {
-  .cards {
-    flex-direction: row;
-  }
-}
+
+
 
 .cards .card:nth-child(2),
 .cards .card:nth-child(2):before,
@@ -643,4 +647,10 @@ header {
 .logo img {
   max-width: 200px;
   /* Ajusta el tamaño máximo del logo según sea necesario */
+}
+h1{
+  font-size: 80px;;
+}
+h2{
+  font-size: 60px;
 }

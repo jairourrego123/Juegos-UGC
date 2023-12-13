@@ -1,5 +1,6 @@
 body {
 	touch-action: pan-y;
+	background-color: #00913D;
 }
 #container {
 	position: absolute;
@@ -7,15 +8,15 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #222;
+	background: #00913D;
 	display: grid;
 	grid-template-rows: 60% 40%;
 }
 
 #maze {
 	position: absolute;
-	width: 340px;
-	height: 240px;
+	width: 680px;
+	height: 480px;
 	/*background: #39a;
 	
 	align-self: center;
@@ -29,26 +30,26 @@ body {
 .mbox,
 .controls {
 	height: 100%;
-	background: #222;
+	background: #00460f;
 	display: grid;
 }
 
 .buttons {
-	width: 210px;
-	height: 140px;
-	background: #222;
+	width: 410px;
+	height: 280px;
+	background: transparent;
 	align-self: center;
 	justify-self: center;
 	display: grid;
-	grid-template-rows: 70px 70px;
-	grid-template-columns: 70px 70px 70px;
+	grid-template-rows: 140px 140px;
+	grid-template-columns: 140px 140px 140px;
 }
 
 .btn {
-	width: 60px;
-	height: 60px;
-	border: 2px #fff solid;
-	border-bottom: 2px #fff solid;
+	width: 120px;
+	height: 120px;
+	border: 4px #fff solid;
+	border-bottom: 4px #fff solid;
 	align-self: center;
 	justify-self: center;
 	cursor: pointer;
@@ -57,13 +58,13 @@ body {
 	/*box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.2);*/
 }
 .chevron {
-	height: 20px;
-	width: 20px;
+	height: 40px;
+	width: 40px;
 	align-self: center;
 	justify-self: center;
 	color: #222;
-	font-size: 20px;
-	line-height: 20px;
+	font-size: 40px;
+	line-height: 40px;
 	text-align: center;
 	color: #fff;
 }
@@ -97,13 +98,13 @@ body {
 
 .emo {
 	position: absolute;
-	top: 4px;
-	left: 1px;
-	width: 13px;
-	height: 13px;
-	border-radius: 20px;
-	font-size: 15px;
-	line-height: 15px;
+	top: 8px;
+	left: 2px;
+	width: 26px;
+	height: 26px;
+	border-radius: 40px;
+	font-size: 30px;
+	line-height: 30px;
 	text-align: left;
 }
 
@@ -112,17 +113,17 @@ body {
 	background: #fff;
 }
 #top {
-	top: 20px;
-	left: 20px;
-	width: 300px;
-	height: 2px;
+	top: 40px;
+	left: 40px;
+	width: 600px;
+	height: 4px;
 }
 
 #bottom {
-	top: 220px;
-	left: 20px;
-	width: 302px;
-	height: 2px;
+	top: 440px;
+	left: 40px;
+	width: 604px;
+	height: 4px;
 }
 
 /*style reset*/

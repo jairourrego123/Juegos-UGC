@@ -66,7 +66,7 @@ function startGame() {
     gameStatus = 'on';
     render();
 
-    msgDiv.innerHTML = `<h2>Escape the Laser!</h2>(Click to jump)`;
+    msgDiv.innerHTML = `<h2>Escape del laser UGC!</h2>(Click para saltar)`;
     setTimeout(() => {
         msgDiv.classList = 'msg off';
     }, 3000);
@@ -96,7 +96,7 @@ function render() {
             requestAnimationFrame(render);
         } else {
             gameStatus = 'end';
-            msgDiv.innerHTML += `Click to restart`;
+            msgDiv.innerHTML += `Clic para reiniciar`;
         }
         return false;
     }
@@ -174,7 +174,7 @@ function render() {
             gameStatus = 'dead';
             playerDiv.classList = 'player dead';
 
-            msgDiv.innerHTML = `<h2>You're dead!</h2>`;
+            msgDiv.innerHTML = `<h2>Fin del juego</h2>`;
             msgDiv.classList = 'msg';
         
         } else {
@@ -186,7 +186,7 @@ function render() {
     speed += 0.001 * dt;
     gameProgress += speed * dt;
 
-    scoreDiv.innerHTML = `Score: ${score}`;
+    scoreDiv.innerHTML = `Puntaje: ${score}`;
 
     if ((gameStatus === 'on') || (gameStatus === 'dead')) {
         requestAnimationFrame(render)

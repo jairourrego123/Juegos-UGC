@@ -3,6 +3,7 @@
     	width: 410px;
     	position: relative;
     	margin: 0 auto;
+		
 	}
 	a.replay {
 	    background: #fff;
@@ -36,6 +37,7 @@
 	    border: 1px solid #ccc;
 	    float: left;
 	    overflow:hidden;
+		background-color: #fff;
 
      }
      .error{display: none;}
@@ -53,7 +55,11 @@
      .quote:nth-child(even){ right:20%;}
      
      .score-board{font-size: 20px;}
-     
+
+     body {
+		background-color: #00913D;
+	 }
+
 	b.error {
 	    position: absolute;
 	    bottom: 0;
